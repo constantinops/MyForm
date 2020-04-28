@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyForm</string>
+    <string name="txt_pantalla1">Ingresa tu nombre</string>
+
 </resources>

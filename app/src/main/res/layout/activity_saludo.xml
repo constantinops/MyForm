@@ -7,7 +7,7 @@
     tools:context=".SaludoActivity">
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioGroupSaludo"
         android:layout_width="191dp"
         android:layout_height="74dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,13 +17,17 @@
         app:layout_constraintVertical_bias="0.372">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButtonSaludo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
+
+            android:checked="true"
+            android:focusable="auto"
             android:text="Saludo" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButtonDespedida"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Despedida" />
@@ -35,26 +39,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSaludo"
+        app:layout_constraintVertical_bias="0.069"
+        />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewEdad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textColor="#E91E63"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/seekBar2Edad"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/seekBar2Edad"
         app:layout_constraintTop_toBottomOf="@+id/seekBar2Edad" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonSiguiente"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="156dp"
@@ -65,6 +73,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEdad"
         app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
