@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,14 +22,12 @@ public class SaludoActivity extends AppCompatActivity {
     private  final int valorMayor = 60;
     public static  final int radioSaludo = 1;
     public  static  final int radioAdios = 2;
+    public int opcion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saludo);
         Bundle bundle = getIntent().getExtras();
-        if(bundle != null){
-            nombre = bundle.getString("edtNombre");
-        }
         iniciarElementos();
         barraProgreso();
         validarBtnSiguiente();
@@ -40,7 +36,7 @@ public class SaludoActivity extends AppCompatActivity {
     public void iniciarElementos(){
         rdbSaludo = findViewById(R.id.radioButtonSaludo);
         rdbDespedida = findViewById(R.id.radioButtonDespedida);
-        btnSiguiente = findViewById(R.id.buttonSiguiente);
+        btnSiguiente = findViewById(R.id.buttonCompartir);
         sebEdad = findViewById(R.id.seekBar2Edad);
         edtMostrarEdad = findViewById(R.id.textViewEdad);
     }
@@ -78,12 +74,13 @@ public class SaludoActivity extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 
     public void validarBtnSiguiente(){
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null){
+            nombre = bundle.getString("edtNombre");
+        }
 
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,21 +88,12 @@ public class SaludoActivity extends AppCompatActivity {
                 Intent intent = new Intent(SaludoActivity.this,CompartirMensageActivity.class);
                 intent.putExtra("edtPantalla1",nombre);
                 intent.putExtra("edad",value);
-                int opcion = (rdbSaludo.isChecked()) ? radioSaludo : radioAdios;
+                opcion = (rdbSaludo.isChecked()) ? radioSaludo : radioAdios;
                 intent.putExtra("rdOpcion",opcion);
                 startActivity(intent);
                 Toast.makeText(SaludoActivity.this,sebEdad.getProgress()+"",Toast.LENGTH_SHORT).show();
 
             }
         });
-
-
-
-
-
     }
-
-
-
-
 }

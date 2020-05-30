@@ -4,6 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="0dp"
     tools:context=".CompartirMensageActivity">
 
+    <ImageView
+        android:id="@+id/imageViewEnviar"
+        android:layout_width="145dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="248dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_checkmarkcircle_111048" />
+
+    <Button
+        android:id="@+id/buttonCompartir"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#E91E63"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:padding="0dp"
+        android:shadowColor="#E91E63"
+        android:text="Compartir"
+        android:textColor="@color/colorIcons"
+        android:textColorHint="#9C27B0"
+        android:textColorLink="#FFEB3B"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewEnviar"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

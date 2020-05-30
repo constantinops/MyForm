@@ -62,10 +62,11 @@
         app:layout_constraintTop_toBottomOf="@+id/seekBar2Edad" />
 
     <Button
-        android:id="@+id/buttonSiguiente"
+        android:id="@+id/buttonCompartir"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="156dp"
+        android:background="#E91E63"
         android:backgroundTint="@android:color/holo_red_dark"
         android:text="Siguiente"
         android:textColor="@color/colorIcons"

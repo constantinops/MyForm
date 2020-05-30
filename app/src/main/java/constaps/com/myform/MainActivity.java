@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void iniciarElementos(){
         edtNombrePersona = findViewById(R.id.editTextNombre);
-        btSiguientePantalla = findViewById(R.id.buttonSiguiente);
+        btSiguientePantalla = findViewById(R.id.buttonCompartir);
     }
     public  void validarTexto(){
         String nombre = edtNombrePersona.getText().toString();
